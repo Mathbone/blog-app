@@ -1,8 +1,11 @@
 <?php
   require "header.php";
- ?>
-<p>Body text</p>
+?>
+ <main>
+    <p>Body text</p>
+ </main>
+
 
 <?php
   require 'footer.php';
- ?>
+?>
