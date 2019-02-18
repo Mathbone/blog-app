@@ -1,7 +1,7 @@
 <?php
   require "header.php";
 ?>
- <main>
+ <main id="main">
     <p>Body text</p>
  </main>
 

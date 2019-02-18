@@ -1,7 +1,7 @@
 <?php
   require "header.php";
 ?>
- <main>
+ <main id="main">
    <h1>Register</h1>
    <form class="registration" action="includes/register.inc.php" method="post">
      <input type="text" name="uid" placeholder="Username">
