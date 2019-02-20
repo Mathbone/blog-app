@@ -1,3 +1,7 @@
+<?php
+session_start();
+ ?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,15 +29,23 @@
           <li><a href="#">Contact</a></li>
         </ul>
         <span class="regbar">
-          <form class="login" action="includes/login.inc.php" method="post">
-            <input type="text" name="login-username" placeholder="Username">
-            <input type="text" name="login-pwd" placeholder="Password">
-            <button type="submit" name="login-submit">Login</button>
-          </form>
-          <a href="register.php">Register</a>
-          <form class="logout" action="includes/logout.inc.php" method="post">
-            <button type="submit" name="logout-submit">Logout</button>
-          </form>
+          <?php
+          if(isset($_SESSION['userId'])) {
+            echo '<form class="logout" action="includes/logout.inc.php" method="post">
+              <button type="submit" name="logout-submit">Logout</button>
+            </form>';
+          }
+          else{
+            echo '<form class="login" action="includes/login.inc.php" method="post">
+              <input type="text" name="login-username" placeholder="Username">
+              <input type="password" name="login-pwd" placeholder="Password">
+              <button type="submit" name="login-submit">Login</button>
+            </form>
+            <a href="register.php">Register</a>';
+          }
+          ?>
+
+
         </span>
       </nav>
       <div id="side-menu" class="side-nav">
