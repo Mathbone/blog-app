@@ -31,6 +31,7 @@ session_start();
         <span class="regbar">
           <?php
           if(isset($_SESSION['userId'])) {
+            echo '<a href="makePost.php">Make a Post</a>';
             echo '<form class="logout" action="includes/logout.inc.php" method="post">
               <button type="submit" name="logout-submit">Logout</button>
             </form>';
