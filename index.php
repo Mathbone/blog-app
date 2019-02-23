@@ -16,7 +16,13 @@
         mysqli_stmt_execute($stmt);
         $result = mysqli_stmt_get_result($stmt);
         while($row = mysqli_fetch_assoc($result)){
-            echo '<div class="blog-post">'.$row['textPosts'].'<div class="author">'.$row['authoridPosts'].'</div><div class="timestamp">'.$row['timestampPosts'].'</div></div>';
+          $sql = "SELECT uidUsers FROM users WHERE idUsers = ".$row['authoridPosts'];
+          $stmt = mysqli_stmt_init($conn);
+          mysqli_stmt_prepare($stmt,$sql);
+          mysqli_stmt_execute($stmt);
+          $nameResult = mysqli_stmt_get_result($stmt);
+          $authorName = mysqli_fetch_assoc($nameResult)['uidUsers'];
+          echo '<div class="blog-post">'.$row['textPosts'].'<div class="author">'.$authorName.'</div><div class="timestamp">'.$row['timestampPosts'].'</div></div>';
         }
 
       }

@@ -3,7 +3,7 @@ session_start();
 
 if (isset($_POST['post-submit'])){
   require 'dbh.inc.php';
-  $postText = $_POST['post-text'];
+  $postText = htmlentities($_POST['post-text']);
 
   if (empty($postText)){
     header("Location: ../register.php?error=emptyPost");

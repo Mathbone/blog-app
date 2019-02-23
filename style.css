@@ -77,12 +77,17 @@ textarea {
   float:left;
 }
 
-.login input{
+.regbar .logout{
+  float: left;
+}
+
+.regbar input{
   height: 42px;
 }
 
-.login button{
+.regbar button{
   height: 42px;
+  margin: 2px 16px 0px 16px;
 }
 
 .regbar a{
