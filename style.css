@@ -1,15 +1,23 @@
 body {
   font-family: "Arial", serif;
-  background-color: #f4f4f4;
+  background-color: #b99c6b;
 }
 
 textarea {
   height:auto;
   width: auto;
 }
-
+.logo{
+  float: left;
+  height: 63px;
+  text-align: center;
+  margin: 8px 0 0 0;
+}
+.cork{
+  font-family: "Impact";
+}
 .navbar {
-  background-color: #3b5998;
+  background-color: #404F24;
   overflow: hidden;
   height: 63px;
 }
@@ -41,7 +49,7 @@ textarea {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #668D3C;
   opacity: 0.9;
   overflow-x: hidden;
   padding-top: 63px;

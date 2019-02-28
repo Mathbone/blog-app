@@ -24,10 +24,7 @@
           $authorName = mysqli_fetch_assoc($nameResult)['uidUsers'];
           echo '<div class="blog-post">'.$row['textPosts'].'<div class="author">'.$authorName.'</div><div class="timestamp">'.$row['timestampPosts'].'</div></div>';
         }
-
       }
-
-
     }
     else{
       echo '<h1 class="register-message">Please register or login to view blog posts.</h1>';
